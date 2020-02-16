@@ -1,0 +1,21 @@
+[alias]
+	criar = !git checkout -b
+	deletar = !git checkout master && git branch -d
+	deletar-remoto = !git branch -dr
+	adicionar = !git add
+	remover = !git reset HEAD --
+	desfazer = !git checkout --
+	comitar = !git add . && git commit -m
+	recomitar = !git commit --amend -m
+	descomitar = !git reset --soft HEAD~1
+	registros = !git log --pretty=format:'%n\"%s\"%n %C(yellow)%h%Creset - %Cgreen%an%Creset (%cr)' --max-count=5
+	projeto = !git remote add origin	
+	atualizar = !git pull origin
+	subir = !git push -u origin
+	remoto = !(git fetch --quiet && git log --pretty=format:'%n\"%s\"%C(cyan)%d%Creset%n %C(yellow)%h%Creset - %Cgreen%an%Creset (%cr)' ..@{u})
+	pendentes = !(git fetch --quiet && git log --pretty=format:'%n\"%s\"%C(cyan)%d%Creset%n %C(yellow)%h%Creset - %Cgreen%an%Creset (%cr)' @{u}..)
+	mover = !git checkout
+	raiz = !git checkout master
+	checar = !git status -sb
+	verificar = !git show --name-only
+	mesclar = !git checkout master && git merge
